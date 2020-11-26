@@ -1,0 +1,59 @@
+package com.company;
+
+public class BMW extends  Masini{
+    private String marca;
+    private String culoarea;
+    private int anul;
+    private double volum;
+
+
+    public BMW(String marca, String culoarea, int anul) {
+
+        this.marca = marca;
+        this.culoarea = culoarea;
+        this.anul = anul;
+
+    }
+
+    @Override
+    public void pretMasini() {
+        System.out.println(pret());;
+    }
+
+    public double pret(){
+        return  getAnul() * 3.13d;
+    }
+
+    public double qntDissel() {
+        return 113.23 * getVolum();
+    }
+
+    public String println() {
+        return ("Marca: " + this.marca + ", Culoarea: " + this.culoarea + ", Anul: " + this.anul);
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    public void setCuloarea(String culoarea) {
+        this.culoarea = culoarea;
+    }
+    public void setAnul(int anul) {
+        this.anul = anul;
+    }
+
+    public void setVolum(double volum) {
+        this.volum = volum;
+    }
+
+    public double getVolum() {
+        return volum;
+    }
+
+
+    public  String getMarca() {return marca;}
+    public  String getCuloarea() {return culoarea;}
+    public  int getAnul() {return anul;}
+
+
+}
